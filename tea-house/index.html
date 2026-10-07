@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>精灵茶社</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="viewport" aria-label="精灵茶社沉浸式场景">
+      <section class="stage" id="stage" aria-label="茶社首页场景">
+        <div class="scene-media" aria-hidden="true">
+          <img class="scene-background" src="素材/背景图.jpeg" alt="" />
+          <video class="scene-video is-active" muted loop playsinline preload="auto"></video>
+          <video class="scene-video" muted loop playsinline preload="auto"></video>
+        </div>
+
+        <button class="hotspot timeline-trigger" type="button" data-panel="timeline" aria-label="打开时序详情">
+          <img class="timeline-layer timeline-outer" src="素材/时序盘/外圈.png" alt="" draggable="false" />
+          <img class="timeline-layer timeline-inner" src="素材/时序盘/内圈.png" alt="" draggable="false" />
+          <img class="timeline-layer timeline-pointer" src="素材/时序盘/指针.png" alt="" draggable="false" />
+          <span class="timeline-particles" aria-hidden="true"></span>
+        </button>
+
+        <button class="hotspot notice-trigger" type="button" data-panel="notice" aria-label="打开茶社公告详情">
+          <img src="素材/公告栏.png" alt="" draggable="false" />
+        </button>
+
+        <div class="modal" id="detailModal" aria-hidden="true">
+          <button class="modal-backdrop" type="button" aria-label="关闭详情面板"></button>
+          <section class="modal-panel" role="dialog" aria-modal="true" aria-label="详情面板">
+            <button class="modal-close" type="button" aria-label="关闭详情面板"></button>
+            <img class="modal-image" id="modalImage" src="" alt="" draggable="false" />
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <script src="main.js"></script>
+  </body>
+</html>
